@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptive Assistant</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>🤖 Adaptive Assistant v2</h1>
+    <button id="installBtn" hidden>Установить</button>
+  </header>
+
+  <main id="chat"></main>
+
+  <section class="controls">
+    <details>
+      <summary>⚙️ Настройки AI и поведения</summary>
+      <div class="grid">
+        <input id="baseUrl" placeholder="Base URL (OpenAI-compatible), напр: https://openrouter.ai/api/v1" />
+        <input id="apiKey" type="password" placeholder="API key (опционально)" />
+        <input id="model" placeholder="Model, напр: meta-llama/llama-3.1-8b-instruct:free" />
+        <label><input type="checkbox" id="requireConfirm" checked /> Подтверждать изменения ассистента</label>
+        <label><input type="checkbox" id="voiceEnabled" /> Голосовые ответы</label>
+      </div>
+      <small>Без API ключа ассистент работает в режиме: поиск + память + адаптация настроек.</small>
+    </details>
+
+    <textarea id="prompt" placeholder="Напиши запрос... Например: 'Измени себя: отвечай короче и добавь голос'"></textarea>
+    <div class="row">
+      <button id="sendBtn">Отправить</button>
+      <button id="applyBtn" hidden>✅ Применить предложенные изменения</button>
+    </div>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+</html>
