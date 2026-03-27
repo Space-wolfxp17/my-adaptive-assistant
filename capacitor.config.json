@@ -1,0 +1,8 @@
+{
+  "appId": "com.assistant.adaptive",
+  "appName": "Adaptive Assistant",
+  "webDir": "web",
+  "server": {
+    "androidScheme": "https"
+  }
+}
